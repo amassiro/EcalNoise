@@ -114,6 +114,18 @@ process.GlobalTag.toGet = cms.VPSet(
 
 
 
+# remove noise
+
+
+process.ecal_electronics_sim = cms.PSet(
+    ConstantTerm = cms.double(0.003),
+    applyConstantTerm = cms.bool(True),
+    doENoise = cms.bool(True)
+)
+
+
+
+
 # Path and EndPath definitions
 process.raw2digi_step = cms.Path(process.RawToDigi)
 process.L1Reco_step = cms.Path(process.L1Reco)

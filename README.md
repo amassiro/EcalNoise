@@ -32,3 +32,26 @@ Tests:
     
     
     
+Dump TP information:
+
+    cd ~/work/ECAL/CMSSW_9_3_0_pre4/src/ECALValidation/EcalTP/test/
+    cmsenv
+
+    cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=noNoise.root
+ 
+    cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=noNoise.newConfigSasha.root
+    cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=noNoise.newConfigSasha.hardcoded.root
+    
+    cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=withNoise.root
+    
+ 
+ 
+    TTree* tree = (TTree*) _file0->Get("TreeProducer/tree")
+    tree ->Draw("TPflag*(TPflag<2)+(TPflag>=2)*2>>h(3,0,3", "TPonlineETADC>-1", "colz");
+    h->GetXaxis()->SetTitle("TP flag");
+    h->Scale (1./h->Integral());
+    h->SetLineWidth(2);
+    h->Draw("hist");
+    h->GetBinContent (1)
+    h->GetBinContent (2)
+    h->GetBinContent (3)
