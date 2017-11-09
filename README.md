@@ -44,7 +44,8 @@ Dump TP information:
     
     cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=withNoise.root
     
- 
+    cmsRun runRawtoRecoAndDump.py             inputFiles=file:/afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src/EcalNoise/step2_DIGI_L1_DIGI2RAW_HLT.root    outputFile=withoutNoise.root
+    
  
     TTree* tree = (TTree*) _file0->Get("TreeProducer/tree")
     tree ->Draw("TPflag*(TPflag<2)+(TPflag>=2)*2>>h(3,0,3", "TPonlineETADC>-1", "colz");

@@ -90,10 +90,10 @@ process.GlobalTag.toGet = cms.VPSet(
 
 
          cms.PSet(record = cms.string("EcalPedestalsRcd"),
-            tag = cms.string("EcalPedestals_2017extrap_25fb_mc"),
+            #tag = cms.string("EcalPedestals_2017extrap_25fb_mc"),
             #tag = cms.string("EcalPedestals_2017_rms0.000001_mc"),
             #tag = cms.string("EcalPedestals_2017_rms0.2887_mc"),
-            #tag = cms.string("EcalPedestals_2017_rms0.2887_EBEE_mc"),
+            tag = cms.string("EcalPedestals_2017_rms0.2887_EBEE_mc"),
             #tag = cms.string("EcalPedestals_2017_rms1.0_mc"),
             connect = cms.string("frontier://FrontierProd/CMS_CONDITIONS")
             ),
