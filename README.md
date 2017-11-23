@@ -4,7 +4,7 @@
 Where:
 
     /afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_9/src
-    
+    /afs/cern.ch/user/a/amassiro/work/ECAL/Pulses/CMSSW_9_2_10/src
     
 Tests: 
 
@@ -56,3 +56,14 @@ Dump TP information:
     h->GetBinContent (1)
     h->GetBinContent (2)
     h->GetBinContent (3)
+
+    
+    
+    
+Tests:
+    
+    r99t  scripts/plotPedestalsMultiple.cxx\(\"/tmp/amassiro/dump_data_EcalPedestals__since_00283019_till_00286534.dat\",\"/tmp/amassiro/dump_data_EcalPedestals__since_00306213_till_00306637.dat\"\)   
+    r99t  scripts/plotPedestalsMultiple.cxx\(\"/tmp/amassiro/dump_data_EcalPedestals__since_00283019_till_00286534.dat\",\"/tmp/amassiro/dump_data_EcalPedestals__since_00304783_till_00305084.dat\"\)   
+    
+    
+    
